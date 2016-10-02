@@ -1,0 +1,36 @@
+{
+  "name": "angular-boilerplate",
+  "authors": [
+    "spkarthick <spkarthick91@gmail.com>"
+  ],
+  "description": "Simple boilerplate for angular applications",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "boilerplate",
+    "starter",
+    "authentication"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.0",
+    "angular-ui-router": "0.2.15",
+    "bootstrap": "^3.3.0",
+    "angular-bootstrap": "^2.1.0",
+    "angular-animate": "1.5.0",
+    "angular-animate-css": "^0.0.4",
+    "font-awesome": "4.6.3",
+    "color-hash": "~1.0.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "lib"
+  ]
+}

@@ -1,0 +1,26 @@
+html, body, [ui-view] {
+	height: 100%;
+	overflow: hidden;
+}
+
+.offset-right-20 {
+	margin-right: 20px;
+}
+
+.offset-top-20 {
+	margin-top: 20px;
+}
+
+.offset-right-10 {
+	margin-right: 10px;
+}
+
+.offset-top-10 {
+	margin-top: 10px;
+}
+
+[ui-view] {
+	padding-top: 70px;
+	margin-bottom: 20px;
+	overflow: scroll;
+}

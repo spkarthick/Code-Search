@@ -1,0 +1,46 @@
+home .list-group-item {
+	border-left: 10px solid;
+	box-shadow: 1px 3px 10px #afafaf;
+	border-radius: none;
+	min-height: 502px;
+}
+
+codepanel .title {
+	font-size: 25px;
+}
+
+codepanel {
+	color: #585858;
+}
+
+.codemirror pre {
+	height: 400px;
+}
+
+.codemirror{
+	position: relative;
+}
+
+.codeinfo {
+	height: 50px;
+    position: absolute;
+    right: 0px;
+    border-radius: 0px 0px 0px 25px;
+    border: 1px solid #cfcfcf;
+    background: #fefefe;
+	padding: 0px 25px;
+    line-height: 45px;
+    box-shadow: -3px 3px 6px #d6d6d6;
+}
+
+.codeinfo .fa {
+	margin-right: 5px;
+}
+
+.codeinfo .fa-check {
+	color: green;
+}
+
+.codeinfo .fa-close {
+	color: red;
+}

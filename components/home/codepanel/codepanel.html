@@ -1,0 +1,11 @@
+<div class="container-fluid">
+	<div class="row">
+		<img ng-src="{{::vm.language}}" height="50"/> <span class="title">{{::vm.panelData.title}}</span>
+	</div>
+	<div class="row offset-top-20 codemirror">
+		<div class="codeinfo"><i class="fa" aria-hidden="true" ng-class="{'fa-check': vm.panelData.compiler_status == 'Accepted', 'fa-close': vm.panelData.compiler_status != 'Accepted'}"></i> {{::vm.panelData.compiler_status}} | {{::vm.panelData.language}}</div>
+		<pre>
+			<code ng-bind="vm.panelData.source_code"></code>
+		</pre>
+	</div>
+</div>

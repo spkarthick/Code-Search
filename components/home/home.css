@@ -1,0 +1,13 @@
+.panel-frame {
+	border: 1px solid #afafaf;
+}
+
+.codepager {
+	position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    background: #FFF;
+    border: 1px solid #afafaf;
+    left: 0px;
+}

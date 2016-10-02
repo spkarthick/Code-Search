@@ -1,0 +1,85 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="input-group offset-top-20">
+						<span class="input-group-addon" id="searchicon"><i class="fa fa-search" aria-hidden="true"></i> </span>
+						<input type="text" ng-model="vm.search" class="form-control" aria-describedby="searchicon" placeholder="Search (by title, level or language)"/>
+					</div>
+					<ul class="list-group offset-top-20">
+					  <li class="list-group-item offset-top-20" ng-repeat="submission in (filteredResult = (vm.codeCollection | filter: vm.searchResult))" style="border-left-color: {{::vm.colorHash.hex(submission.language)}}">
+						<codepanel panel-data="submission" language="{{(vm.languageCollection | filter: {'language': submission.language})[0].icon}}"></codepanel>
+					  </li>
+					</ul>
+					<div ng-if="!filteredResult.length" class="text-center"><h4><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> No Results found</h4></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 offset-top-20">
+						<div class="panel panel-default">
+						  <div class="panel-heading"><h4><i class="fa fa-filter offset-right-10" aria-hidden="true"></i> Filter</h4></div>
+						  <div class="panel-body">
+								<div>
+									<div class="form-group">
+										<input type="checkbox" name="status" ng-true-value="'Accepted'" ng-model="vm.filterStatus.accepted" />
+										<label>Accepted</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" name="status" ng-true-value="'Skipped'" ng-model="vm.filterStatus.skipped" />
+										<label>Skipped</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" name="status" ng-true-value="'Time Memory'" ng-model="vm.filterStatus.memory" />
+										<label>Memory / Time limit exceeded</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" name="status" ng-true-value="'Compilation Runtime'" ng-model="vm.filterStatus.runtime" />
+										<label>Runtime / Compilation error</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" name="status" ng-true-value="'Wrong answer'" ng-model="vm.filterStatus.wrong" />
+										<label>Wrong answer</label>
+									</div>
+								</div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				<div class="row">
+					<div class="col-xs-12 offset-top-20">
+						<div class="panel panel-default">
+							  <div class="panel-heading"><h4><i class="fa fa-line-chart offset-right-10" aria-hidden="true"></i> Statistical Analysis (not implemented)</h4></div>
+							  <div class="panel-body">
+								<div>
+									<div>
+										<h4>Top 5 Languages used</h4>
+										<div></div>
+									</div>
+									<div>
+										<h4>Top-2 Submissions attempted</h4>
+										<div></div>
+									</div>
+									<div>
+										<h4>Number of submissions per level</h4>
+										<div></div>
+									</div>
+									<div>
+										<h4>Total Submissions</h4>
+										<div></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="codepager">
+	  <ul uib-pagination items-per-page="50" total-items="67350" max-size="10" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></ul>
+	</nav>
+</div>
